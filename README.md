@@ -1,3 +1,3 @@
 # websocket
  
-rm -rf /root/*  &&  wget https://raw.githubusercontent.com/ogenio/websocket/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+rm -rf /root/*  &&  wget https://raw.githubusercontent.com/dione566/Script-WebSocket/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
