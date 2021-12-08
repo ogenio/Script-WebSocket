@@ -1,4 +1,4 @@
-# WebSocket
+# ```WebSocket```
 
 
 Ativar WebSocket
