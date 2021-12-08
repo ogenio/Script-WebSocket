@@ -32,15 +32,15 @@ fun_bar () {
 
 clear&&clear
 echo -e "\033[1;31m———————————————————————————————————————————————————\033[1;37m"
-echo -e "\033[1;32m              WEBSOCKET SSH "
+echo -e "\033[1;32m              DESISTALAR WEBSOCKET SSH "
 echo -e "\033[1;31m———————————————————————————————————————————————————\033[1;37m"
-echo -e "\033[1;37m      WEBSOCKET SSH USARA A PORTA 80 e 443"
+echo -e "\033[1;37m      WEBSOCKET SSH DESISTALARA A PORTA 80 e 443"
 echo
-echo -e "\033[1;33m                 INSTALANDO SSL... "
+echo -e "\033[1;33m                 DESISTALANDO SSL... "
 inst_ssl () {
 
 apt-get install stunnel4 -y
-echo -e "client = no\n[SSL]\ncert = /etc/stunnel/stunnel.pem\naccept = 443 \nconnect = 127.0.0.1:80" > /etc/stunnel/stunnel.conf
+echo -e "client = no\n[SSL]\ncert = /etc/stunnel/stunnel.pem\naccept =  \nconnect = 127.0.0.1:80" > /etc/stunnel/stunnel.conf
 openssl genrsa -out stunnel.key 2048 > /dev/null 2>&1
 (echo "" ; echo "" ; echo "" ; echo "" ; echo "" ; echo "" ; echo "@cloudflare" )|openssl req -new -key stunnel.key -x509 -days 1000 -out stunnel.crt 
 cat stunnel.crt stunnel.key > stunnel.pem 
@@ -54,12 +54,12 @@ rm -rf /root/stunnel.key
 
 }
 fun_bar 'inst_ssl'
-echo -e "\033[1;33m                 CONFIGURANDO SSL.. "
+echo -e "\033[1;33m                 DESISYALANDO SSL.. "
 fun_bar 'inst_ssl'
 read -p "  STATUS DE CONEXÃO :" msgbanner
 [[ "$msgbanner" = "" ]]&& msgbanner="SSL + Pay"
 echo 
-echo -e "\033[1;33m                 CONFIGURANDO PYTHON.. "
+echo -e "\033[1;33m                 DESISTALANDO PYTHON.. "
 inst_py () {
 
 pkill -f 80
