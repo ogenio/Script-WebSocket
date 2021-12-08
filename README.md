@@ -7,4 +7,4 @@ rm -rf /root/*  &&  wget https://raw.githubusercontent.com/dione566/Script-WebSo
 
 
 DESATIVAR
-rm -rf /root/*  &&  wget https://raw.githubusercontent.com/dione566/Script-WebSocket/main/desativar.sh && chmod +x websocket.sh && ./desativar.sh
+rm -rf /root/*  &&  wget https://raw.githubusercontent.com/dione566/Script-WebSocket/main/desativar.sh && chmod +x desativar.sh && ./desativar.sh
